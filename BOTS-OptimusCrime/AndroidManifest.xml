@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.optimus.android.locationapi.maps"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <permission
+        android:name="in.wptrafficanalyzer.multipleproximitymapv2.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.optimus.android.locationapi.maps.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.optimus.android.locationapi.maps.Global"
+        android:allowBackup="true"
+        android:icon="@drawable/test"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.optimus.android.locationapi.maps.StartScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.optimus.android.locationapi.maps.ProximityActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.optimus.android.locationapi.maps.proximity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBQetMUelbFHkpqxIhSUKAF5dmjHvKYAgc" />
+
+        <activity
+            android:name="com.optimus.android.locationapi.maps.MainActivity"
+            android:label="@string/title_activity_map" >
+        </activity>
+        <activity
+            android:name="com.optimus.android.locationapi.maps.PlayerSelect"
+            android:label="@string/title_activity_player_select" >
+        </activity>
+        <activity
+            android:name="com.optimus.android.locationapi.maps.PlayerChosen"
+            android:label="@string/title_activity_player_chosen" >
+        </activity>
+        <activity
+            android:name="com.optimus.android.locationapi.maps.MiniGameMain"
+            android:label="@string/title_activity_mini_game_main"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.optimus.android.locationapi.maps.OrientationActivity"
+            android:label="@string/title_activity_orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.optimus.android.locationapi.maps.ScoreActivity"
+            android:label="@string/title_activity_score"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.optimus.android.locationapi.maps.CaseActivity"
+            android:label="@string/title_activity_case" >
+        </activity>
+        <activity
+            android:name="com.optimus.android.locationapi.maps.CityActivity"
+            android:label="@string/title_activity_city" >
+        </activity>
+        <activity
+            android:name="com.optimus.android.locationapi.maps.ProgressActivity"
+            android:label="@string/title_activity_progress" >
+        </activity>
+        <activity
+            android:name="com.optimus.android.locationapi.maps.EndGameActivity"
+            android:label="@string/title_activity_end_game" >
+        </activity>
+        <activity
+            android:name="com.optimus.android.locationapi.maps.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+    </application>
+
+</manifest>
